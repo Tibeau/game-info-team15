@@ -8,6 +8,7 @@ class GameInfoServiceApplicationTests {
 
     @Test
     void contextLoads() {
+        //test
     }
 
 }

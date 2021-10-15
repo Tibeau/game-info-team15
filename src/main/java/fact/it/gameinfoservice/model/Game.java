@@ -4,6 +4,11 @@ import javax.persistence.*;
 @Entity
 public class Game {
     @Column(unique=true)
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private int id;
+
     private String name;
     private int release_year;
     private String developer;
@@ -17,6 +22,13 @@ public class Game {
         setRelease_year(release_year);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

@@ -1,12 +1,22 @@
 package fact.it.gameinfoservice.model;
+import javax.persistence.*;
 
-import java.util.Date;
-
+@Entity
 public class Game {
+    @Column(unique=true)
     private String name;
     private int release_year;
     private String developer;
     private int sales;
+
+    public Game() { }
+    public Game(String name,int release_year, String developer,int sales) {
+        setName(name);
+        setDeveloper(developer);
+        setSales(sales);
+        setRelease_year(release_year);
+    }
+
 
     public String getName() {
         return name;
@@ -40,9 +50,7 @@ public class Game {
         this.sales = sales;
     }
 
-    public Game() {
 
-    }
 }
 
 

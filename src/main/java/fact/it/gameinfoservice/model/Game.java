@@ -1,12 +1,14 @@
 package fact.it.gameinfoservice.model;
 import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
 
-@Entity
+@Document(collection = "games")
 public class Game {
-    @Column(unique=true)
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+
     private int id;
 
     private String name;

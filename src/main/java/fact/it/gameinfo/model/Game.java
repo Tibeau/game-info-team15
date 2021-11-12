@@ -1,5 +1,4 @@
-package com.example.gameinfoteam15.model;
-
+package fact.it.gameinfo.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

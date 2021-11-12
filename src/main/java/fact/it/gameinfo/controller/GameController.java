@@ -1,8 +1,8 @@
-package com.example.gameinfoteam15.controller;
+package fact.it.gameinfo.controller;
 
 
-import com.example.gameinfoteam15.model.Game;
-import com.example.gameinfoteam15.repository.GameRepository;
+import fact.it.gameinfo.model.Game;
+import fact.it.gameinfo.repository.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

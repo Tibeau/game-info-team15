@@ -1,10 +1,10 @@
-package com.example.gameinfoteam15;
+package fact.it.gameinfo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GameInfoTeam15ApplicationTests {
+class GameInfoApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,6 +1,6 @@
-package com.example.gameinfoteam15.repository;
+package fact.it.gameinfo.repository;
 
-import com.example.gameinfoteam15.model.Game;
+import fact.it.gameinfo.model.Game;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.data.mongodb.repository.MongoRepository;

@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 @Repository
-public interface GameRepository extends MongoRepository<Game, Integer> {
+public interface GameRepository extends MongoRepository<Game, String> {
     Game findGameByName(String name);
     List<Game> findGamesByNameContaining(String name);
 }

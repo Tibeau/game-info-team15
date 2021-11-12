@@ -1,8 +1,9 @@
-package fact.it.gameinfoservice.model;
-import javax.persistence.*;
+package com.example.gameinfoteam15.model;
+
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.annotation.Id;
+
 
 @Document(collection = "games")
 public class Game {

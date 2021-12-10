@@ -22,12 +22,16 @@ public class GameController {
             gameRepository.save(new Game("Call of Duty: Cold War", 2021, "Activision", 1500000));
             gameRepository.save(new Game("Call of Duty: Modern Warfare", 2020, "Activision", 1600999));
         }
-        System.out.println(gameRepository.findGameByName("Call of Duty: Cold War").getSales());
+
     }
 
     @GetMapping("/games/name/{name}")
     public List<Game> getGamesbyName(@PathVariable String name){
         return gameRepository.findGamesByNameContaining(name);
+    }
+    @GetMapping("/games/{name}")
+    public Game getGamebyName(@PathVariable String name){
+        return gameRepository.findGameByName(name);
     }
 
 

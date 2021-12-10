@@ -1,2 +1,4 @@
-package fact.it.gameinfo;public class GameControllerUnitTests {
+package fact.it.gameinfo;
+
+public class GameControllerUnitTests {
 }

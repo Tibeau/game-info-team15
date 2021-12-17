@@ -4,9 +4,7 @@ package fact.it.gameinfo.controller;
 import fact.it.gameinfo.model.Game;
 import fact.it.gameinfo.repository.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
@@ -32,6 +30,12 @@ public class GameController {
     @GetMapping("/games/{name}")
     public Game getGamebyName(@PathVariable String name){
         return gameRepository.findGameByName(name);
+    }
+
+    @PostMapping("/games")
+    public Game addGame(@RequestBody Game game){
+        gameRepository.save(game);
+        return game;
     }
 
 

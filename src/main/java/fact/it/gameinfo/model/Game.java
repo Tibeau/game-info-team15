@@ -8,9 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Game {
 
     @Id
-
-    private int id;
-
+    private String id;
     private String name;
     private int release_year;
     private String developer;
@@ -24,11 +22,12 @@ public class Game {
         setRelease_year(release_year);
     }
 
-    public int getId() {
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -32,11 +32,31 @@ public class GameController {
         return gameRepository.findGameByName(name);
     }
 
+    @GetMapping("/games")
+    public List<Game> getGames(){
+        return gameRepository.findAll();
+    }
+
+
     @PostMapping("/games")
     public Game addGame(@RequestBody Game game){
         gameRepository.save(game);
         return game;
     }
 
+    @DeleteMapping("/games/{id}")
+    public void deleteGame(@PathVariable String id){
+        Game game = gameRepository.findById(id).get();
+        gameRepository.delete(game);
+    }
 
+    @PutMapping("/games/{id}")
+    public Game changeGame(@RequestBody Game game, @PathVariable String id){
+        Game game1 = gameRepository.findById(id).get();
+        game1.setName(game.getName());
+        game1.setRelease_year(game.getRelease_year());
+        game1.setDeveloper(game.getDeveloper());
+        return gameRepository.save(game1);
+    }
 }
+

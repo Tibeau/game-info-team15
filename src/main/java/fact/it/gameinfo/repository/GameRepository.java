@@ -11,4 +11,5 @@ import java.util.List;
 public interface GameRepository extends MongoRepository<Game, String> {
     Game findGameByName(String name);
     List<Game> findGamesByNameContaining(String name);
+    List<Game> findGamesByDeveloperNameContaining(String developerName);
 }

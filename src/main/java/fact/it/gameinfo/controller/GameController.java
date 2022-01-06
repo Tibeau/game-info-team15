@@ -44,6 +44,11 @@ public class GameController {
         return game;
     }
 
+    @GetMapping("/games/developer/{developerName}")
+    public List<Game> getGamesByDeveloperName(@PathVariable String developerName){
+        return gameRepository.findGamesByDeveloperNameContaining(developerName);
+    }
+
     @DeleteMapping("/games/{id}")
     public void deleteGame(@PathVariable String id){
         Game game = gameRepository.findById(id).get();
@@ -55,7 +60,7 @@ public class GameController {
         Game game1 = gameRepository.findById(id).get();
         game1.setName(game.getName());
         game1.setRelease_year(game.getRelease_year());
-        game1.setDeveloper(game.getDeveloper());
+        game1.setDeveloperName(game.getDeveloperName());
         return gameRepository.save(game1);
     }
 }

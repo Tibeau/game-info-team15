@@ -58,7 +58,6 @@ public class GameControllerIntegrationTests {
                 .andExpect(jsonPath("$[0].release_year", is(2020)))
                 .andExpect(jsonPath("$[0].developer", is("Activision")))
                 .andExpect(jsonPath("$[0].sales", is(20000)));
-
     }
     @Test
     public void givenGame_whenGetGameByName_thenReturnJsonGames() throws Exception {

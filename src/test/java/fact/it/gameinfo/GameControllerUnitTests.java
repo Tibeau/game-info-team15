@@ -48,7 +48,7 @@ public class GameControllerUnitTests {
                 .andExpect(jsonPath("$", hasSize(1)))
                 .andExpect(jsonPath("$[0].name", is("test")))
                 .andExpect(jsonPath("$[0].release_year", is(2020)))
-                .andExpect(jsonPath("$[0].developer", is("Activision")))
+                .andExpect(jsonPath("$[0].developerName", is("Activision")))
                 .andExpect(jsonPath("$[0].sales", is(20000)));
     }
 
@@ -62,7 +62,7 @@ public class GameControllerUnitTests {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is("test")))
                 .andExpect(jsonPath("$.release_year", is(2020)))
-                .andExpect(jsonPath("$.developer", is("Activision")))
+                .andExpect(jsonPath("$.developerName", is("Activision")))
                 .andExpect(jsonPath("$.sales", is(20000)));
     }
 

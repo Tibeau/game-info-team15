@@ -46,21 +46,22 @@ public class GameController {
 
     @GetMapping("/games/developer/{developerName}")
     public List<Game> getGamesByDeveloperName(@PathVariable String developerName){
-        return gameRepository.findGamesByDeveloperNameContaining(developerName);
+        return gameRepository.findGamesByDeveloperName(developerName);
     }
 
-    @DeleteMapping("/games/{id}")
-    public void deleteGame(@PathVariable String id){
-        Game game = gameRepository.findById(id).get();
+    @DeleteMapping("/games/{name}")
+    public void deleteGame(@PathVariable String name){
+        Game game = gameRepository.findGameByName(name);
         gameRepository.delete(game);
     }
 
-    @PutMapping("/games/{id}")
-    public Game changeGame(@RequestBody Game game, @PathVariable String id){
-        Game game1 = gameRepository.findById(id).get();
+    @PutMapping("/games/{name}")
+    public Game changeGame(@RequestBody Game game, @PathVariable String name){
+        Game game1 = gameRepository.findGameByName(name);
         game1.setName(game.getName());
         game1.setRelease_year(game.getRelease_year());
         game1.setDeveloperName(game.getDeveloperName());
+        game1.setSales(game.getSales());
         return gameRepository.save(game1);
     }
 }

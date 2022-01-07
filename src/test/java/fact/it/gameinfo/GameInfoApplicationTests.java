@@ -9,5 +9,8 @@ class GameInfoApplicationTests {
     @Test
     void contextLoads() {
     }
+    @Test
+    public void main() {
+        GameInfoApplication.main(new String[] {});}
 
 }

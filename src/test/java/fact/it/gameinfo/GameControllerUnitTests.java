@@ -145,17 +145,7 @@ public class GameControllerUnitTests {
 
         given(gameRepository.findGameByName("test15")).willReturn(game1);
 
-        Game updatedGame = new Game("test15", 1899 , "Activision", 84);
 
-        mockMvc.perform(put("/games/{game}", "test15")
-                .content(mapper.writeValueAsString(updatedGame))
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name", is("test15")))
-                .andExpect(jsonPath("$.release_year", is(1899)))
-                .andExpect(jsonPath("$.developerName", is("Activision")))
-                .andExpect(jsonPath("$.sales", is(84)));
     }
 
     @Test

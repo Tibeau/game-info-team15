@@ -9,6 +9,7 @@ public class Game {
 
     @Id
     private String id;
+
     private String name;
     private int release_year;
     private String developerName;

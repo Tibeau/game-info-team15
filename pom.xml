@@ -14,7 +14,7 @@
     <name>game-info</name>
     <description>game-info</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
         <sonar.organization>tibeau</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
